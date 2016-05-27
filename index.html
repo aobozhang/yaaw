@@ -20,10 +20,10 @@
 <html lang="en" manifest="offline.appcache">
   <head>
     <meta charset=utf-8 />
-    <title>Yet Another Aria2 Web Frontend</title>
+    <title>Aobo's Private Offline Downloads (powered by Aria2)</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
     <meta name="author" content="Binux" />
-    
+
     <link href="img/favicon.ico" rel="shortcut icon" type="image/ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
   <body>
     <div class="container">
       <header class="main-head page-header">
-        <h1>Yet Another Aria2 Web Frontend</h1>
+        <h1>Aobo's Private Offline Downloads (powered by Aria2)</h1>
         <span id="offline-cached"></span>
         <div id="global-info" class="pull-right">
           <div id="global-version"></div>
@@ -83,6 +83,9 @@
             </a>
             <a href="#" id="btnRemoveFinished"  class="btn" id="pure-all" rel="tooltip" title="Remove Finished Tasks">
               <i class="icon-trash"></i>
+            </a>
+            <a href="../downloads/" target="_blank" class="btn" id="pure-all" rel="tooltip" title="Show Completed Tasks">
+              已下载
             </a>
           </div>
         </div>
@@ -213,7 +216,7 @@
                 <input type="radio" name="refresh_interval" value="60000"> 1min
               </label>
               <label class="radio inline">
-                <input type="radio" name="refresh_interval" value="0"> off 
+                <input type="radio" name="refresh_interval" value="0"> off
               </label>
             </div>
           </div>
@@ -239,10 +242,10 @@
       <a href="#" class="btn" data-dismiss="modal">Cancel</a>
     </div>
     </section>
-    
+
     <script id="global-speed-tpl" type="text/mustache-template">
       <i class="icon-download"></i> <span>{{#_v.format_size}}{{downloadSpeed}}{{/_v.format_size}}</span>/s
-        / 
+        /
       <i class="icon-upload"></i>  <span>{{#_v.format_size}}{{uploadSpeed}}{{/_v.format_size}}</span>/s
     </script>
 
@@ -282,7 +285,7 @@
       </li>
       {{/tasks}}
     </script>
-    
+
     <script id="other-task-tpl" type="text/mustache-template">
       {{#tasks}}
       <li class="task" id="task-gid-{{gid}}" data-status="{{status}}" data-gid="{{gid}}" data-infohash="{{infoHash}}">
@@ -332,7 +335,7 @@
           </div>
         </div>
       </div>
-    </script>      
+    </script>
 
     <script id="ib-status-tpl" type="text/mustache-template">
       <ul>
@@ -500,10 +503,10 @@
     <script src="js/jquery.jsonrpc.js"></script>
     <script src="js/jquery.Storage.js"></script>
     <script src="js/jquery.base64.min.js"></script>
-    <script src="js/mustache.js"></script>
-    <script src="js/peerid.js"></script>
-    <script src="js/aria2.js"></script>
-    <script src="js/yaaw.js"></script>
+    <script src="./js/mustache.js"></script>
+    <script src="./js/peerid.js"></script>
+    <script src="./js/aria2.js"></script>
+    <script src="./js/yaaw.js"></script>
   </body>
 </html>
 <!-- vim: set et sw=2 ts=2 sts=2 ff=unix fenc=utf8: -->

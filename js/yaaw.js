@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015 Binux <roy@binux.me>
  *
  * This file is part of YAAW (https://github.com/binux/yaaw).
